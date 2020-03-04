@@ -1,5 +1,5 @@
 /*
-const detectNoScriptCode = (document: Document) => {
+const detectNoScriptCode = (document) => {
   "use strict";
 
   const removeClass = () => {
@@ -19,7 +19,7 @@ const detectNoScriptCode = (document: Document) => {
 export const detectNoScript = `!function(b) {"use strict";var c=b.body;c.classList?c.classList.remove("noscript"):c.className.replace("noscript","")}(document);`;
 
 /*
-const detectYesScriptCode = (document: Document) => {
+const detectYesScriptCode = (document) => {
   "use strict";
 
   const addClassIfSupported = () => {

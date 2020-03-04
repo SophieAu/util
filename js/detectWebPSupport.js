@@ -1,10 +1,10 @@
 // modified from https://github.com/djpogo/webp-inline-support/blob/master/webp.js
 
 /*
-const detectNoScriptCode = (document: Document) => {
+const detectNoScriptCode = (document) => {
   "use strict";
 
-  const addClassIfSupported = (hasSupport: boolean) => {
+  const addClassIfSupported = (hasSupport) => {
     if (!hasSupport) return;
 
     const htmlElement = document.documentElement;

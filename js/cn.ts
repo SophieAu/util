@@ -1,2 +1,2 @@
-export const cn = (className?: string | false) =>
+export const cn = (className: string | false) =>
   !!className ? ` ${className}` : "";
