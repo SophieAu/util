@@ -1,2 +1,4 @@
-export const cn = (className: string | false) =>
-  !!className ? ` ${className}` : "";
+type Falsy = false | undefined | null;
+
+export const cn = (...classes: (string | Falsy)[]) =>
+  classes.filter(Boolean).join(" ");
