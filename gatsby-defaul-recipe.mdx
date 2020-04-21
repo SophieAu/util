@@ -1,0 +1,43 @@
+# Default Gatsby Setup
+
+This recipe sets up a Gatsby site with all my default plugins and packages. It is going to install/set up:
+
+* TypeScript
+* Linaria as a css-in-js solution
+
+
+---
+
+Install packages
+
+For TypeScript
+
+<NPMPackage name="typescript" />
+<NPMPackage name="gatsby-plugin-typescript" />
+<NPMPackage name="@typescript-eslint/parser" dependencyType={"development"} />
+<NPMPackage name="@typescript-eslint/eslint-plugin" dependencyType={"development"} />
+
+For linaria
+
+<NPMPackage name="linaria" />
+<NPMPackage name="gatsby-plugin-linaria" />
+<NPMPackage name="linaria" />
+
+---
+
+Installing the plugins in your `gatsby-config.js`.
+
+<GatsbyPlugin name="gatsby-plugin-typescript" />
+<GatsbyPlugin name="gatsby-plugin-linaria" />
+
+---
+
+
+<File
+  path="tsconfig.json"
+  content="https://raw.githubusercontent.com/microsoft/TypeScript-Website/0afd526969d98c321787ab1962f72f9361ab54bd/packages/typescriptlang-org/tsconfig.json" />
+
+<File
+  path=".eslintrc.js"
+  content='https://gist.github.com/KyleAMathews/5c4cfa4f58cc2707094f3ae5048e72f6' />
+
