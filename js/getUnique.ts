@@ -1,1 +1,1 @@
-const getUnique = (list: []) => [...new Set(list)];
+export const getUnique = (list: []) => [...new Set(list)];
