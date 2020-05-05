@@ -13,24 +13,24 @@ interface Props {
 const Link: React.FC<Props> = ({ to, className, children, style, rel, ariaLabel, handleClick }) =>
   /^http/.test(to) ? (
     <a
+      aria-label={ariaLabel}
       className={className}
       href={to}
-      target="_blank"
       rel="noopener noreferrer"
       style={style}
-      aria-label={ariaLabel}
+      target="_blank"
       onClick={handleClick}
     >
       {children}
     </a>
   ) : (
     <GatsbyLink
-      className={className}
-      to={to}
-      style={style}
-      rel={rel}
-      onClick={handleClick}
       aria-label={ariaLabel}
+      className={className}
+      rel={rel}
+      style={style}
+      to={to}
+      onClick={handleClick}
     >
       {children}
     </GatsbyLink>
