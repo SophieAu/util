@@ -16,7 +16,7 @@ interface Props {
 
 const MarkdownWithLink: React.FC<Props> = ({ children, className, id }) => (
   <p className={className} id={id}>
-    {children.split(SPLIT_PER_LINK).map((subString, i) => {
+    {children.split(SPLIT_PER_LINK).map((subString: string, i: number) => {
       if (!CONTAINS_LINK.test(subString)) return subString;
 
       const [_, text, link] = subString.split(EXTRACT_LINK);
