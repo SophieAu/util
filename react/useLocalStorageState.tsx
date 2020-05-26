@@ -1,8 +1,10 @@
 // taken from Kent C. Dodds' Beginner's Guide to React (https://egghead.io/lessons/react-create-reusable-custom-hooks)
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export const useLocalStorageState = (key: string, defaultValue = "") => {
+type Hook = [string, React.Dispatch<React.SetStateAction<string>>];
+
+export const useLocalStorageState = (key: string, defaultValue = ""): Hook => {
   const [state, setState] = useState(
     () =>
       (typeof window !== undefined && window.localStorage.getItem(key)) ||
