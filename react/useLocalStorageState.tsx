@@ -7,12 +7,12 @@ type Hook = [string, React.Dispatch<React.SetStateAction<string>>];
 export const useLocalStorageState = (key: string, defaultValue = ""): Hook => {
   const [state, setState] = useState(
     () =>
-      (typeof window !== undefined && window.localStorage.getItem(key)) ||
+      (typeof window !== "undefined" && window.localStorage.getItem(key)) ||
       defaultValue
   );
 
   useEffect(() => {
-    typeof window !== undefined && window.localStorage.setItem(key, state);
+    typeof window !== "undefined" && window.localStorage.setItem(key, state);
   }, [key, state]);
 
   return [state, setState];
