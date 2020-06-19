@@ -14,3 +14,13 @@
   white-space: nowrap;
   word-wrap: normal;
 }
+
+/* make visible on focus e.g. for 'Skip to content buttons' */
+.visually-hidden:focus {
+  clip: unset;
+  height: unset;
+  margin: unset;
+  width: unset;
+  top: 0;
+  left: 0;
+}
