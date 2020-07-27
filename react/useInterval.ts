@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 // run the callback every time after a certain delay (i.e. not just once but continuously)
 export const useInterval = (callback: () => void, delay: number) => {
-  const savedCallback = useRef();
+  const savedCallback = useRef<() => void>();
 
   // Remember the latest callback.
   useEffect(() => {
@@ -13,7 +13,7 @@ export const useInterval = (callback: () => void, delay: number) => {
 
   // Set up the interval.
   useEffect(() => {
-    const tick = () => savedCallback.current();
+    const tick = () => savedCallback.current?.();
 
     if (delay !== null) {
       const id = setInterval(tick, delay);
